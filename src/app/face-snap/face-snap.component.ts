@@ -21,6 +21,6 @@ export class FaceSnapComponent {
   constructor(private router: Router) { }
 
   onViewFaceSnap() {
-    this.router.navigateByUrl('facesnaps/${this.facesnap.id}');
+    this.router.navigateByUrl(`facesnaps/${this.faceSnap.id}`);
   }
 }

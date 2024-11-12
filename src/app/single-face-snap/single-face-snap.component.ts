@@ -16,7 +16,8 @@ export class SingleFaceSnapComponent implements OnInit {
   snapButtonText!: string;
   userHasSnapped!: Boolean
 
-  constructor(private faceSnapService: FaceSnapsService, private route: ActivatedRoute) { }
+  constructor(private faceSnapsService: FaceSnapsService, 
+              private route: ActivatedRoute) { }
 
 
   ngOnInit() {
@@ -33,13 +34,13 @@ export class SingleFaceSnapComponent implements OnInit {
   }
 
   unSnap() {
-    this.faceSnapService.snapFaceSnapById(this.faceSnap.id, 'unsnap')
+    this.faceSnapsService.snapFaceSnapById(this.faceSnap.id, 'unsnap')
     this.snapButtonText = 'Oh Snap!';
     this.userHasSnapped = false;
   }
 
   snap() {
-    this.faceSnapService.snapFaceSnapById(this.faceSnap.id, 'snap')
+    this.faceSnapsService.snapFaceSnapById(this.faceSnap.id, 'snap')
     this.snapButtonText = 'Oops, unSnap!';
     this.userHasSnapped = true;
   }
@@ -51,7 +52,7 @@ export class SingleFaceSnapComponent implements OnInit {
   
   private getFaceSnap(){
     const faceSnapId = this.route.snapshot.params['id'];
-    this.faceSnap = this.faceSnapService.getFaceSnapById(faceSnapId);
+    this.faceSnap = this.faceSnapsService.getFaceSnapById(faceSnapId);
   }
 }
 
