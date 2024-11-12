@@ -10,11 +10,11 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",  // Correction ici pour spécifier le builder browser
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/FaceSnaps",  // La sortie du build doit être dans dist/FaceSnaps
-            "index": "src/index.html",  // Fichier index
-            "main": "src/main.ts",  // Point d'entrée de l'application
+            "outputPath": "dist/FaceSnaps",
+            "index": "src/index.html",
+            "main": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
@@ -44,12 +44,13 @@
                 }
               ],
               "outputHashing": "all",
-              "baseHref": "/FaceSnaps/"  // Assurez-vous que le base href est correctement défini pour le déploiement
+              "baseHref": "/FaceSnaps/"  // Base href pour GitHub Pages ou autre déploiement
             },
             "development": {
               "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true
+              "sourceMap": true,
+              "baseHref": "/"  // Base href pour développement local
             }
           },
           "defaultConfiguration": "production"
