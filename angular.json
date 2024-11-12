@@ -5,43 +5,16 @@
   "projects": {
     "snapface": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "style": "scss",
-          "skipTests": true
-        },
-        "@schematics/angular:class": {
-          "skipTests": true
-        },
-        "@schematics/angular:directive": {
-          "skipTests": true
-        },
-        "@schematics/angular:guard": {
-          "skipTests": true
-        },
-        "@schematics/angular:interceptor": {
-          "skipTests": true
-        },
-        "@schematics/angular:pipe": {
-          "skipTests": true
-        },
-        "@schematics/angular:resolver": {
-          "skipTests": true
-        },
-        "@schematics/angular:service": {
-          "skipTests": true
-        }
-      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:application",
+          "builder": "@angular-devkit/build-angular:browser",  // Correction ici pour spécifier le builder browser
           "options": {
-            "outputPath": "dist/FaceSnaps",  // Modification ici pour le dossier de build
-            "index": "src/index.html",
-            "main": "src/main.ts",
+            "outputPath": "dist/FaceSnaps",  // La sortie du build doit être dans dist/FaceSnaps
+            "index": "src/index.html",  // Fichier index
+            "main": "src/main.ts",  // Point d'entrée de l'application
             "polyfills": [
               "zone.js"
             ],
@@ -70,7 +43,8 @@
                   "maximumError": "4kB"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "baseHref": "/FaceSnaps/"  // Assurez-vous que le base href est correctement défini pour le déploiement
             },
             "development": {
               "optimization": false,
