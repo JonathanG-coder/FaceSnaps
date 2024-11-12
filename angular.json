@@ -44,13 +44,13 @@
                 }
               ],
               "outputHashing": "all",
-              "baseHref": "/FaceSnaps/"  // Base href pour GitHub Pages ou autre déploiement
+              "baseHref": "/FaceSnaps/"  
             },
             "development": {
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true,
-              "baseHref": "/"  // Base href pour développement local
+              "baseHref": "/" 
             }
           },
           "defaultConfiguration": "production"
