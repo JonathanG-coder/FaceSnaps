@@ -1,15 +1,18 @@
 # SnapFace 📸
 
-Description
+Description :
+
 SnapFace est une application web de partage de photos développée avec Angular. Ce projet a pour objectif de créer une interface simple et conviviale permettant aux utilisateurs de partager leurs photos, de les "snaper" (liker) et de découvrir les publications des autres utilisateurs.
 
 Technologies utilisées :
+
 Framework : Angular
 Langage : TypeScript
 Gestionnaire de paquets : NPM
 Stylisation : SCSS
 
-Aperçu
+Aperçu :
+
 Home : 
 ![Home snapface](https://github.com/user-attachments/assets/2aac64eb-91eb-4b0f-b11f-e88b1e2e51b9)
 
