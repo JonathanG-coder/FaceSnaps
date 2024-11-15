@@ -47,4 +47,29 @@ export class FaceSnapsService {
         const faceSnap: FaceSnap = this.getFaceSnapById(faceSnapId);
         faceSnap.snap(snapType);
     }
+
+    addFaceSnap(formValue: { title: string, description: string, imageUrl: string, location?: string }): void {
+        const faceSnap: FaceSnap = {
+            ...formValue,
+            snaps: 0,
+            createdDate: new Date(),
+            id: this.faceSnaps[this.faceSnaps.length - 1].id + 1,
+            addSnap: function (): void {
+                throw new Error("Function not implemented.");
+            },
+            removeSnap: function (): void {
+                throw new Error("Function not implemented.");
+            },
+            snap: function (snapType: SnapType): void {
+                throw new Error("Function not implemented.");
+            },
+            setLocation: function (location: string): void {
+                throw new Error("Function not implemented.");
+            },
+            withLocation: function (location: string): FaceSnap {
+                throw new Error("Function not implemented.");
+            }
+        };
+        this.faceSnaps.push(faceSnap);
+    }
 }
